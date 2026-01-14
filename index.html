@@ -1,0 +1,27 @@
+<html>
+<head>
+    <title>AI Notes Generator</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>📘 AI Notes Generator</h1>
+
+        <form method="POST" enctype="multipart/form-data">
+            <textarea name="text" placeholder="Paste your text here..."></textarea>
+
+            <p>OR Upload PDF</p>
+            <input type="file" name="pdf">
+
+            <button type="submit">Generate Notes</button>
+        </form>
+
+        {% if summary %}
+        <div class="output">
+            <h2>📌 Generated Notes</h2>
+            <p>{{ summary }}</p>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
